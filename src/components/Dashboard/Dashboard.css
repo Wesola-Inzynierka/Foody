@@ -1,2 +1,28 @@
 .Dashboard {
+    width: calc(100% - 200px);
+    padding: 100px;
+}
+
+.Dashboard_inner {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.Dashboard_column {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.Dashboard_section {
+    width: 100%;
+}
+
+#WIDTH_70 {
+    width: 70%;
+}
+
+#WIDTH_30 {
+    width: 30%;
 }
