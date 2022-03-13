@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 30px;
+    padding: 30px 0px;
 }
 
 .NavBar_box {
@@ -25,6 +25,7 @@
     background-color: #00000000;
     width: 40px;
     height: 40px;
+    margin: 0px 30px;
     border-radius: 8px;
 }
 
@@ -38,22 +39,36 @@
 }
 
 .NavBar_button {
-    background-color: #00000000;
-    width: 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 70px;
     height: 40px;
-    border-radius: 8px;
+    padding: 0px 0px 0px 30px;
 }
 
-.NavBar_button:hover, #MEALS:hover, #DISCOVER:hover, #DIET:hover, #SETTINGS:hover, #AVATAR:hover {
+.NavBar_button_background {
+    background-color: #00000000;
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.NavBar_button_background:hover, #MEALS> .NavBar_button_background:hover, #DISCOVER> .NavBar_button_background:hover, #DIET> .NavBar_button_background:hover, #SETTINGS> .NavBar_button_background:hover, #AVATAR> .NavBar_button_background:hover {
     background-color: #1f1f1faa;
     cursor: pointer;
 }
 
-.NavBar_button_inner {
-    margin: 8px;
+.NavBar_active {
+    content: ".";
+    background-color: #000000;
+    width: 4px;
+    height: 40px;
+}
+
+.NavBar_button_icon {
     width: 24px;
     height: 24px;
-    border-radius: 8px;
     background-position: center;
     background-size: cover;
 }
@@ -62,38 +77,46 @@
     background-image: url("icons/logo.png");
 }
 
-#MEALS {
+#HOME > .NavBar_button_background {
+    background-color: #212121;
+}
+
+#HOME > .NavBar_button_background > .NavBar_button_icon {
+    background-image: url("icons/Home.svg");
+}
+
+#MEALS > .NavBar_button_background {
     background-color: #7C99DB;
 }
 
-#MEALS > .NavBar_button_inner {
+#MEALS > .NavBar_button_background > .NavBar_button_icon {
     background-image: url("icons/Meals.svg");
 }
 
-#DISCOVER {
+#DISCOVER > .NavBar_button_background {
     background-color: #6D9EE6;
 }
 
-#DISCOVER > .NavBar_button_inner{
+#DISCOVER > .NavBar_button_background > .NavBar_button_icon{
     background-image: url("icons/Diet.svg");
 }
 
-#DIET {
+#DIET > .NavBar_button_background {
     background-color: #6464BB;
 }
 
-#DIET > .NavBar_button_inner {
+#DIET > .NavBar_button_background > .NavBar_button_icon {
     background-image: url("icons/Discover.svg");
 }
 
-#SETTINGS > .NavBar_button_inner {
+#SETTINGS > .NavBar_button_background > .NavBar_button_icon {
     background-image: url("icons/Settings.svg");
 }
 
-#AVATAR {
+#AVATAR > .NavBar_button_background {
     background-color: #CCCCCC;
 }
 
-#AVATAR > .NavBar_button_inner {
+#AVATAR > .NavBar_button_background > .NavBar_button_icon {
     background-image: url("icons/avatar.png");
 }
