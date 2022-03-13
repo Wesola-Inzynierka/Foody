@@ -1,0 +1,57 @@
+.TopBar {
+    width: 100%;
+    height: 40px;
+}
+
+.TopBar_inner {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.TopBar_search {
+    background-color: #EEEEFE;
+    border-radius: 20px;
+    width: 70%;
+    height: 40px;
+}
+
+.TopBar_search_inner {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 40px;
+}
+
+.TopBar_button {
+    display: flex;
+    width: 40px;
+    height: 40px;
+}
+
+.TopBar_button_background {
+    background-color: #00000000;
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.TopBar_button_background:hover {
+    background-color: #1f1f1faa;
+    cursor: pointer;
+}
+
+.TopBar_button_icon {
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-size: cover;
+}
+/* 
+#CHAT > .TopBar_button_background > .TopBar_button_icon {
+    background-image: url("icons/Chat.svg");
+} */
