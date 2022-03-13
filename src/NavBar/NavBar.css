@@ -46,6 +46,7 @@
 
 .NavBar_button:hover, #MEALS:hover, #DISCOVER:hover, #DIET:hover, #SETTINGS:hover, #AVATAR:hover {
     background-color: #1f1f1faa;
+    cursor: pointer;
 }
 
 .NavBar_button_inner {
