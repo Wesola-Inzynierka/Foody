@@ -1,0 +1,98 @@
+.NavBar {
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 100px;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+.NavBar_inner {
+    height: calc(100% - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.NavBar_box {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.NavBar_logo {
+    background-color: #00000000;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.NavBar_logo_inner {
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background-position: center;
+    background-size: cover;
+}
+
+.NavBar_button {
+    background-color: #00000000;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.NavBar_button:hover, #MEALS:hover, #DISCOVER:hover, #DIET:hover, #SETTINGS:hover, #AVATAR:hover {
+    background-color: #1f1f1faa;
+}
+
+.NavBar_button_inner {
+    margin: 8px;
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    background-position: center;
+    background-size: cover;
+}
+
+#LOGO > .NavBar_logo_inner {
+    background-image: url("icons/logo.png");
+}
+
+#MEALS {
+    background-color: #7C99DB;
+}
+
+#MEALS > .NavBar_button_inner {
+    background-image: url("icons/Meals.svg");
+}
+
+#DISCOVER {
+    background-color: #6D9EE6;
+}
+
+#DISCOVER > .NavBar_button_inner{
+    background-image: url("icons/Diet.svg");
+}
+
+#DIET {
+    background-color: #6464BB;
+}
+
+#DIET > .NavBar_button_inner {
+    background-image: url("icons/Discover.svg");
+}
+
+#SETTINGS > .NavBar_button_inner {
+    background-image: url("icons/Settings.svg");
+}
+
+#AVATAR {
+    background-color: #CCCCCC;
+}
+
+#AVATAR > .NavBar_button_inner {
+    background-image: url("icons/avatar.png");
+}
