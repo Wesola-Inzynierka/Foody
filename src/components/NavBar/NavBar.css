@@ -110,6 +110,10 @@
     background-image: url("icons/Discover.svg");
 }
 
+#ABOUT > .NavBar_button_background > .NavBar_button_icon {
+    background-image: url("icons/About.svg");
+}
+
 #SETTINGS > .NavBar_button_background > .NavBar_button_icon {
     background-image: url("icons/Settings.svg");
 }

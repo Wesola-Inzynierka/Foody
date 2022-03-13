@@ -41,6 +41,11 @@ function NavBar() {
                 <div className="NavBar_button_icon"></div>
               </div>
             </a>
+            <a className="NavBar_button" id="ABOUT" href='/about'>
+              <div className="NavBar_button_background">
+                <div className="NavBar_button_icon"></div>
+              </div>
+            </a>
             <a className="NavBar_button" id="AVATAR" href='/me'>
               <div className="NavBar_button_background">
                 <div className="NavBar_button_icon"></div>
