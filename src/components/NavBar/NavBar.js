@@ -11,41 +11,41 @@ function NavBar() {
             </div>
           </div>
           <div className="NavBar_box">
-            <div className="NavBar_button" id="HOME">
+            <a className="NavBar_button" id="HOME" href='/'>
               <div className="NavBar_button_background">
                 <div className="NavBar_button_icon"></div>
               </div>
               <div className='NavBar_active'/>
-            </div>
-            <div className="NavBar_button" id="MEALS">
+            </a>
+            <a className="NavBar_button" id="MEALS" href='/meals'>
               <div className="NavBar_button_background">
                 <div className="NavBar_button_icon"></div>
               </div>
-            </div>
-            <div className="NavBar_button" id="DISCOVER">
+            </a>
+            <a className="NavBar_button" id="DISCOVER" href='/discover'>
               <div className="NavBar_button_background">
                 <div className="NavBar_button_icon"></div>
               </div>
-            </div>
-            <div className="NavBar_button" id="DIET">
+            </a>
+            <a className="NavBar_button" id="DIET" href='/diet'>
               <div className="NavBar_button_background">
                 <div className="NavBar_button_icon"></div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
         <div className="NavBar_box">
           <div className="NavBar_box">
-            <div className="NavBar_button" id="SETTINGS">
+            <a className="NavBar_button" id="SETTINGS" href='/settings'>
               <div className="NavBar_button_background">
                 <div className="NavBar_button_icon"></div>
               </div>
-            </div>
-            <div className="NavBar_button" id="AVATAR">
+            </a>
+            <a className="NavBar_button" id="AVATAR" href='/me'>
               <div className="NavBar_button_background">
                 <div className="NavBar_button_icon"></div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>

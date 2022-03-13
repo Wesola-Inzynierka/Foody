@@ -5,6 +5,7 @@
     width: 100px;
     height: 100vh;
     background-color: #ffffff;
+    position: fixed;
 }
 
 .NavBar_inner {
