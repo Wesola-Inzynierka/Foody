@@ -12,7 +12,7 @@ function NavBar() {
   return (
     <div className="NavBar">
       <div className="NavBar_inner">
-        <div className="NavBar_box">
+        <div className="NavBar_box" style={{gap: '70px'}}>
           <div className="NavBar_box">
             <div className="NavBar_logo" id="LOGO">
               <div className="NavBar_logo_inner"></div>
