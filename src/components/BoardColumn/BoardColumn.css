@@ -1,0 +1,11 @@
+.BoardColumn {
+    width: 50%;
+
+}
+
+.BoardColumn_inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}

@@ -1,5 +1,10 @@
-import './About.css';
 import NavBar from '../components/NavBar/NavBar';
+import Board from '../components/Board/Board';
+import BoardColumn from '../components/BoardColumn/BoardColumn';
+import BoardSection from '../components/BoardSection/BoardSection';
+import TopBar from '../components/TopBar/TopBar';
+
+import './About.css';
 import ReactMarkdown from 'react-markdown'
 
 var markdown = `# Foody
@@ -24,9 +29,23 @@ function About() {
   return (
     <div className="About">
       <NavBar/>
-      <ReactMarkdown children={markdown}>
-        
-      </ReactMarkdown>
+      <Board>
+        <BoardColumn>
+          <BoardSection>
+            <TopBar/>
+          </BoardSection>
+        </BoardColumn>
+        <BoardColumn>
+          <BoardSection>
+          </BoardSection>
+        </BoardColumn>
+      </Board>
+      <Board>
+        <div>
+        <ReactMarkdown children={markdown}></ReactMarkdown>
+        </div>
+      </Board>
+      
     </div>
   );
 }
