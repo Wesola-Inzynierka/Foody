@@ -1,0 +1,19 @@
+.NavBarItem {
+    width: 70px;
+    height: 40px;
+    padding: 0px 0px 0px 30px;
+}
+
+.NavBarItem_inner {
+    display: flex;
+    justify-content: space-between;
+    width: 70px;
+    height: 40px;
+}
+
+.NavBarItem_active {
+    content: ".";
+    background-color: #000000;
+    width: 4px;
+    height: 40px;
+}

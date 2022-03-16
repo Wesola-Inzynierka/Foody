@@ -1,0 +1,20 @@
+.Logo {
+    background-color: #00000000;
+    width: 40px;
+    height: 40px;
+    margin: 0px 30px;
+    border-radius: 8px;
+}
+
+.Logo_inner {
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background-position: center;
+    background-size: cover;
+}
+
+#LOGO > .Logo_inner {
+    background-image: url("../../icons/logo.png");
+}
