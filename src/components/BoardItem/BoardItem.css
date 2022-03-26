@@ -4,3 +4,7 @@
     height: 155px;
     border-radius: 20px;
 }
+
+.BoardItem:hover {
+    background-color: #eeeeee;
+}
