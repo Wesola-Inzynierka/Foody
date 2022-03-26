@@ -54,12 +54,12 @@ function Meals() {
         </NavBarSection>
       </NavBar>
       <Board>
-        <BoardColumn>
+        <BoardColumn widthSize={"large"}>
           <BoardSection>
             <TopBar/>
           </BoardSection>
         </BoardColumn>
-        <BoardColumn>
+        <BoardColumn widthSize={"small"}>
           <BoardSection>
           </BoardSection>
         </BoardColumn>

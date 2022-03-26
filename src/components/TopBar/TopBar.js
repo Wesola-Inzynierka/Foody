@@ -10,7 +10,7 @@ function TopBar() {
         <div className='TopBar_inner'>
             <div className='TopBar_search'>
                 <div className='TopBar_search_inner'>
-                    <div> <Word word='search'/></div>
+                    <div className='TopBar_search_field'> <Word word='search'/></div>
                     <Button href='/search' backgroundColor='#00000000' backgroundImage={SearchIcon}/>
                 </div>
             </div>

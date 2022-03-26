@@ -54,12 +54,14 @@ function Diet() {
         </NavBarSection>
       </NavBar>
       <Board>
-        <BoardColumn>
+        <BoardColumn widthSize={"large"}>
           <BoardSection>
             <TopBar/>
           </BoardSection>
+          <BoardSection title={"Your diets"}>
+          </BoardSection>
         </BoardColumn>
-        <BoardColumn>
+        <BoardColumn widthSize={"small"}>
           <BoardSection>
           </BoardSection>
         </BoardColumn>

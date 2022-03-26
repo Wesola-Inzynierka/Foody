@@ -2,6 +2,7 @@ import NavBar from '../components/NavBar/NavBar';
 import Board from '../components/Board/Board';
 import BoardColumn from '../components/BoardColumn/BoardColumn';
 import BoardSection from '../components/BoardSection/BoardSection';
+import BoardItem from '../components/BoardItem/BoardItem';
 import TopBar from '../components/TopBar/TopBar';
 
 import NavBarSection from '../components/NavBarSection/NavBarSection';
@@ -54,13 +55,17 @@ function Chat() {
         </NavBarSection>
       </NavBar>
       <Board>
-        <BoardColumn>
+        <BoardColumn widthSize={"large"}>
           <BoardSection>
             <TopBar/>
           </BoardSection>
         </BoardColumn>
-        <BoardColumn>
+        <BoardColumn widthSize={"small"}>
           <BoardSection>
+            <BoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></BoardItem>
+            <BoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></BoardItem>
+            <BoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></BoardItem>
+            <BoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></BoardItem>
           </BoardSection>
         </BoardColumn>
       </Board>

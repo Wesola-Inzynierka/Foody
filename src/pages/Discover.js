@@ -2,6 +2,7 @@ import NavBar from '../components/NavBar/NavBar';
 import Board from '../components/Board/Board';
 import BoardColumn from '../components/BoardColumn/BoardColumn';
 import BoardSection from '../components/BoardSection/BoardSection';
+import BoardItem from '../components/BoardItem/BoardItem';
 import TopBar from '../components/TopBar/TopBar';
 
 import NavBarSection from '../components/NavBarSection/NavBarSection';
@@ -54,12 +55,40 @@ function Discover() {
         </NavBarSection>
       </NavBar>
       <Board>
-        <BoardColumn>
+        <BoardColumn widthSize={"large"}>
           <BoardSection>
             <TopBar/>
           </BoardSection>
+          <BoardSection title={"Recipses for you"}>
+            <BoardItem widthSize={"large"}></BoardItem>
+            <BoardItem></BoardItem>
+            <BoardItem></BoardItem>
+            <BoardItem></BoardItem>
+            <BoardItem></BoardItem>
+            <BoardItem></BoardItem>
+            <BoardItem></BoardItem>
+            <BoardItem></BoardItem>
+            <BoardItem></BoardItem>
+          </BoardSection>
+          <BoardSection title={"Discover products"}>
+            <BoardItem heightSize={"small"}></BoardItem>
+            <BoardItem heightSize={"small"}></BoardItem>
+            <BoardItem heightSize={"small"}></BoardItem>
+            <BoardItem heightSize={"small"}></BoardItem>
+            <BoardItem heightSize={"small"}></BoardItem>
+            <BoardItem heightSize={"small"}></BoardItem>
+            <BoardItem heightSize={"small"}></BoardItem>
+            <BoardItem heightSize={"small"}></BoardItem>
+            <BoardItem heightSize={"small"}></BoardItem>
+            <BoardItem heightSize={"small"}></BoardItem>
+            <BoardItem heightSize={"small"}></BoardItem>
+            <BoardItem heightSize={"small"}></BoardItem>
+            <BoardItem heightSize={"small"}></BoardItem>
+            <BoardItem heightSize={"small"}></BoardItem>
+            <BoardItem heightSize={"small"}></BoardItem>
+          </BoardSection>
         </BoardColumn>
-        <BoardColumn>
+        <BoardColumn widthSize={"small"}>
           <BoardSection>
           </BoardSection>
         </BoardColumn>

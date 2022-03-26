@@ -2,11 +2,11 @@ import './NavBarSection.css';
 
 function NavBarSection({children, innerStyle}) {
   return (
-    <div className="NavBarSection">
+    <section className="NavBarSection">
         <div className="NavBarSection_inner" style={innerStyle}>
             {children}
         </div>
-    </div>
+    </section>
   );
 }
 

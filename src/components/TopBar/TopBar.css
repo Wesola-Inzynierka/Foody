@@ -19,11 +19,17 @@
 }
 
 .TopBar_search_inner {
-    width: 100%;
+    padding: 0px 10px;
+    width: calc(100% - 20px);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     height: 40px;
+}
+
+.TopBar_search_field {
+    height: 40px;
+    line-height: 40px;
 }
 
 .TopBar_button {
