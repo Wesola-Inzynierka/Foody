@@ -12,14 +12,14 @@
       "iconInvert":"invert(0%)"
     },
     "dark": {
-      "navbarBackgroundColor":"#000000",
+      "navbarBackgroundColor":"#0f0f10",
       "navbarTextColor":"#ffffff",
       "navbarActiveColor": "#FFFFFF",
       "boardBackgroundColor":"#121212",
       "boardTextColor":"#ffffff",
-      "boardItemBackgroundColor":"#000000",
+      "boardItemBackgroundColor":"#23242a",
       "boardItemTextColor":"#FFFFFF",
-      "searchbarBackgroundColor": "#272727",
+      "searchbarBackgroundColor": "#23242a",
       "searchbarTextColor":"#FFFFFF",
       "iconInvert":"invert(100%)"
     }
