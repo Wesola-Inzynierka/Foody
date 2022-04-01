@@ -1,0 +1,14 @@
+.Icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.Icon_inner {
+    align-self: center;
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-size: cover;
+}

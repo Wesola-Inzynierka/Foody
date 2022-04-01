@@ -2,7 +2,6 @@ import NavBar from '../components/NavBar/NavBar';
 import Board from '../components/Board/Board';
 import BoardColumn from '../components/BoardColumn/BoardColumn';
 import BoardSection from '../components/BoardSection/BoardSection';
-import TopBar from '../components/TopBar/TopBar';
 
 import './About.css';
 import ReactMarkdown from 'react-markdown'
@@ -18,6 +17,11 @@ import DietIcon from '../icons/Diet.svg';
 import SettingsIcon from '../icons/Settings.svg';
 import AboutIcon from '../icons/About.svg';
 import AvatarIcon from '../icons/avatar.png';
+
+import ChatIcon from '../icons/Chat.svg';
+import SearchBar from '../components/SearchBar/SearchBar';
+import Tools from '../components/Tools';
+import AddIcon from '../icons/Add.svg';
 
 var markdown = `# Foody
 
@@ -63,10 +67,10 @@ function About() {
           <NavBarSection>
           <NavBarSection>
             <NavBarItem active={false}>
-              <Button href='/settings' backgroundColor='#00000000' backgroundImage={SettingsIcon}/>
+              <Button href='/settings' backgroundImage={SettingsIcon}/>
             </NavBarItem>
             <NavBarItem active={true}>
-              <Button href='/about' backgroundColor='#00000000' backgroundImage={AboutIcon}/>
+              <Button href='/about' backgroundImage={AboutIcon}/>
             </NavBarItem>
             <NavBarItem active={false}>
               <Button href='/me' backgroundColor='#CCCCCC' backgroundImage={AvatarIcon}/>
@@ -76,8 +80,9 @@ function About() {
       </NavBar>
       <Board>
         <BoardColumn widthSize={"large"}>
-          <BoardSection>
-            <TopBar/>
+          <BoardSection justifyContent={"space-between"}>
+            <SearchBar></SearchBar>
+            <Button href='/chat' backgroundImage={ChatIcon}/>
           </BoardSection>
         </BoardColumn>
         <BoardColumn widthSize={"small"}>

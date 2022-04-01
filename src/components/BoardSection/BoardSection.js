@@ -1,12 +1,17 @@
 import './BoardSection.css';
 
-function BoardSection({children, title, backgroundColor}) {
+function BoardSection({children, title, backgroundColor, justifyContent, flexDirection}) {
   if(backgroundColor != undefined) {
     var style = {
       backgroundColor: backgroundColor,
       padding: "20px",
       width: "calc(100% - 40px)"
     }
+  }
+
+  var innerStyle = {
+    justifyContent: justifyContent,
+    flexDirection: flexDirection
   }
   
   if(title != undefined) {
@@ -15,7 +20,7 @@ function BoardSection({children, title, backgroundColor}) {
           <div className="BoardSection_title">
             {title}
           </div>
-          <div className="BoardSection_inner">
+          <div className="BoardSection_inner" style={innerStyle}>
               {children}
           </div>
       </div>
@@ -23,7 +28,7 @@ function BoardSection({children, title, backgroundColor}) {
   } else {
     return (
       <div className="BoardSection" style={style}>
-          <div className="BoardSection_inner">
+          <div className="BoardSection_inner" style={innerStyle}>
               {children}
           </div>
       </div>

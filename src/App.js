@@ -1,3 +1,4 @@
+
 import {
   BrowserRouter,
   Routes,
@@ -16,7 +17,23 @@ import Settings from './pages/Settings';
 import About from './pages/About';
 import Chat from './pages/Chat';
 
+import themePackage from './assets/themePackage.json'
+import languagePackage from './assets/languagePackage.json'
+
+window.languagePackage = languagePackage;
+window.themePackage = themePackage;
 window.logged = true;
+
+
+const localTheme = localStorage.getItem('theme');
+if(!localTheme) {
+  localStorage.setItem('theme', 'light');
+}
+
+const localLanguage = localStorage.getItem('language');
+if(!localLanguage) {
+  localStorage.setItem('language', 'en');
+}
 
 function App() {
   if(window.logged == false) {
@@ -29,6 +46,7 @@ function App() {
     );
   } else {
     return (
+      
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}/>

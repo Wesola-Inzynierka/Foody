@@ -1,0 +1,13 @@
+.ToolsBoard {
+    right: 0px;
+    bottom: 0px;
+    position: fixed;
+}
+
+.ToolsBoard_inner {
+    padding: 50px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 35px;
+}

@@ -1,0 +1,26 @@
+{
+    "light": {
+      "navbarBackgroundColor":"#FFFFFF",
+      "navbarTextColor":"#000000",
+      "navbarActiveColor": "#000000",
+      "boardBackgroundColor":"#F5F6FF",
+      "boardTextColor":"#000000",
+      "boardItemBackgroundColor":"#FFFFFF",
+      "boardItemTextColor":"#000000",
+      "searchbarBackgroundColor": "#eeeefe",
+      "searchbarTextColor":"#000000",
+      "iconInvert":"invert(0%)"
+    },
+    "dark": {
+      "navbarBackgroundColor":"#000000",
+      "navbarTextColor":"#ffffff",
+      "navbarActiveColor": "#FFFFFF",
+      "boardBackgroundColor":"#121212",
+      "boardTextColor":"#ffffff",
+      "boardItemBackgroundColor":"#000000",
+      "boardItemTextColor":"#FFFFFF",
+      "searchbarBackgroundColor": "#272727",
+      "searchbarTextColor":"#FFFFFF",
+      "iconInvert":"invert(100%)"
+    }
+}

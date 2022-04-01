@@ -2,9 +2,14 @@ import './BoardItem.css';
 
 function BoardItem({children, backgroundColor, widthSize, heightSize}) {
     var style = {
-        backgroundColor: backgroundColor
+        backgroundColor: window.themePackage[localStorage.getItem('theme')]["boardItemBackgroundColor"],
+        color: window.themePackage[localStorage.getItem('theme')]["boardItemTextColor"]
+      }
+    
+    if(backgroundColor != undefined) {
+        style.backgroundColor = backgroundColor;
     }
-
+    
     if(widthSize == "small") {
         style.width = "52.5px";
     } else if(widthSize == "medium") {

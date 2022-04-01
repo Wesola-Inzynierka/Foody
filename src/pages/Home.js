@@ -3,7 +3,6 @@ import Board from '../components/Board/Board';
 import BoardColumn from '../components/BoardColumn/BoardColumn';
 import BoardSection from '../components/BoardSection/BoardSection';
 import BoardItem from '../components/BoardItem/BoardItem';
-import TopBar from '../components/TopBar/TopBar';
 
 import NavBarSection from '../components/NavBarSection/NavBarSection';
 import NavBarItem from '../components/NavBarItem/NavBarItem';
@@ -14,8 +13,14 @@ import MealsIcon from '../icons/Meals.svg';
 import DiscoverIcon from '../icons/Discover.svg';
 import DietIcon from '../icons/Diet.svg';
 import SettingsIcon from '../icons/Settings.svg';
+
 import AboutIcon from '../icons/About.svg';
 import AvatarIcon from '../icons/avatar.png';
+
+import ChatIcon from '../icons/Chat.svg';
+import SearchBar from '../components/SearchBar/SearchBar';
+import Tools from '../components/Tools';
+import AddIcon from '../icons/Add.svg';
 
 function Home() {
   return (
@@ -43,10 +48,10 @@ function Home() {
           <NavBarSection>
           <NavBarSection>
             <NavBarItem active={false}>
-              <Button href='/settings' backgroundColor='#00000000' backgroundImage={SettingsIcon}/>
+              <Button href='/settings' backgroundImage={SettingsIcon}/>
             </NavBarItem>
             <NavBarItem active={false}>
-              <Button href='/about' backgroundColor='#00000000' backgroundImage={AboutIcon}/>
+              <Button href='/about' backgroundImage={AboutIcon}/>
             </NavBarItem>
             <NavBarItem active={false}>
               <Button href='/me' backgroundColor='#CCCCCC' backgroundImage={AvatarIcon}/>
@@ -56,10 +61,11 @@ function Home() {
       </NavBar>
       <Board>
         <BoardColumn widthSize={"large"}>
-          <BoardSection>
-            <TopBar/>
+          <BoardSection justifyContent={"space-between"}>
+            <SearchBar></SearchBar>
+            <Button href='/chat' backgroundImage={ChatIcon}/>
           </BoardSection>
-          <BoardSection title={"Recipes for you"}>
+          <BoardSection title={window.languagePackage[localStorage.getItem('language')]["recipes_for_you"]}>
             <BoardItem widthSize={"large"}></BoardItem>
             <BoardItem></BoardItem>
             <BoardItem></BoardItem>
@@ -70,7 +76,7 @@ function Home() {
             <BoardItem></BoardItem>
             <BoardItem></BoardItem>
           </BoardSection>
-          <BoardSection title={"Today summary"}>
+          <BoardSection title={window.languagePackage[localStorage.getItem('language')]["today_summary"]}>
             <BoardItem heightSize={"small"} backgroundColor={"#314A6E"}></BoardItem>
             <BoardItem heightSize={"small"}></BoardItem>
             <BoardItem heightSize={"small"}></BoardItem>

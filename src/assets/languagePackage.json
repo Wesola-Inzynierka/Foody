@@ -1,0 +1,46 @@
+{
+    "en": {
+      "search": "Search...",
+      "recipes_for_you": "Recipes for you",
+      "today_summary": "Today summary",
+      "discover_products": "Discover products",
+      "your_diets": "Your diets",
+      "activity_level": "Activity level",
+      "passa": "Passa",
+      "badges": "Badges",
+      "personal_bests": "Personal bests"
+    },
+    "pl": {
+      "search": "Szukaj...",
+      "recipes_for_you": "Przepisy dla ciebie",
+      "today_summary": "Dzisiejsze podsumowanie",
+      "discover_products": "Odkryj produkty",
+      "your_diets": "Twoje diety",
+      "activity_level": "Poziom aktywności",
+      "passa": "Passa",
+      "badges": "Odznaki",
+      "personal_bests": "Życiowe rekordy"
+    },
+    "de": {
+      "search": "Suchen...",
+      "recipes_for_you": "Rezepte für Sie",
+      "today_summary": "Zusammenfassung von heute",
+      "discover_products": "Produkte entdecken",
+      "your_diets": "Ihre Ernährungsgewohnheiten",
+      "activity_level": "Aktivitätsniveau",
+      "passa": "Passa",
+      "badges": "Abzeichen",
+      "personal_bests": "Persönliche Bestleistungen"
+    },
+    "ru": {
+      "search": "Поиск...",
+      "recipes_for_you": "Рецепты для вас",
+      "today_summary": "Сводка за сегодня",
+      "discover_products": "Открыть продукты",
+      "your_diets": "Ваши диеты",
+      "activity_level": "Уровень активности",
+      "passa": "Пасса",
+      "badges": "Значки",
+      "personal_bests": "Личные рекорды"
+    }
+  }

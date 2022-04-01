@@ -3,7 +3,6 @@ import Board from '../components/Board/Board';
 import BoardColumn from '../components/BoardColumn/BoardColumn';
 import BoardSection from '../components/BoardSection/BoardSection';
 import BoardItem from '../components/BoardItem/BoardItem';
-import TopBar from '../components/TopBar/TopBar';
 
 import NavBarSection from '../components/NavBarSection/NavBarSection';
 import NavBarItem from '../components/NavBarItem/NavBarItem';
@@ -17,7 +16,37 @@ import SettingsIcon from '../icons/Settings.svg';
 import AboutIcon from '../icons/About.svg';
 import AvatarIcon from '../icons/avatar.png';
 
+import ChatIcon from '../icons/Chat.svg';
+import SearchBar from '../components/SearchBar/SearchBar';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Tools from '../components/Tools';
+import AddIcon from '../icons/Add.svg';
+
 function Discover() {
+  const recipeSuccess = () => toast.success('Recipe added successfull!', {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored"
+    });
+
+    const productSuccess = () => toast.success('Product added successfull!', {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored"
+      });
+
   return (
     <div className="Discover">
       <NavBar>
@@ -43,10 +72,10 @@ function Discover() {
           <NavBarSection>
           <NavBarSection>
             <NavBarItem active={false}>
-              <Button href='/settings' backgroundColor='#00000000' backgroundImage={SettingsIcon}/>
+              <Button href='/settings' backgroundImage={SettingsIcon}/>
             </NavBarItem>
             <NavBarItem active={false}>
-              <Button href='/about' backgroundColor='#00000000' backgroundImage={AboutIcon}/>
+              <Button href='/about' backgroundImage={AboutIcon}/>
             </NavBarItem>
             <NavBarItem active={false}>
               <Button href='/me' backgroundColor='#CCCCCC' backgroundImage={AvatarIcon}/>
@@ -56,10 +85,11 @@ function Discover() {
       </NavBar>
       <Board>
         <BoardColumn widthSize={"large"}>
-          <BoardSection>
-            <TopBar/>
+          <BoardSection justifyContent={"space-between"}>
+            <SearchBar></SearchBar>
+            <Button href='/chat' backgroundImage={ChatIcon}/>
           </BoardSection>
-          <BoardSection title={"Recipses for you"}>
+          <BoardSection title={window.languagePackage[localStorage.getItem('language')]["recipes_for_you"]}>
             <BoardItem widthSize={"large"}></BoardItem>
             <BoardItem></BoardItem>
             <BoardItem></BoardItem>
@@ -70,7 +100,7 @@ function Discover() {
             <BoardItem></BoardItem>
             <BoardItem></BoardItem>
           </BoardSection>
-          <BoardSection title={"Discover products"}>
+          <BoardSection title={window.languagePackage[localStorage.getItem('language')]["discover_products"]}>
             <BoardItem heightSize={"small"}></BoardItem>
             <BoardItem heightSize={"small"}></BoardItem>
             <BoardItem heightSize={"small"}></BoardItem>
@@ -93,6 +123,27 @@ function Discover() {
           </BoardSection>
         </BoardColumn>
       </Board>
+      <Tools.ToolsBoard>
+        <Tools.ToolsFace>
+          <Button size={"large"} href='/discover' backgroundColor='#6D9EE6' backgroundImage={AddIcon}/>
+        </Tools.ToolsFace>
+        <Tools.ToolsBar>
+          <Button onClick={recipeSuccess} backgroundColor='#7C99DB' backgroundImage={AddIcon}/>
+          <Button onClick={productSuccess} backgroundColor='#7C99DB' backgroundImage={AddIcon}/>
+        </Tools.ToolsBar>
+      </Tools.ToolsBoard>
+
+      <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                />
     </div>
   );
 }
