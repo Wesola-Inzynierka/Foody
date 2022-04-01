@@ -9,3 +9,16 @@
     flex-direction: column;
     gap: 50px;
 }
+
+@media only screen and (max-width: 768px) {
+    .BoardColumn {
+        width: 100%;
+    }
+    
+    .BoardColumn_inner {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+}

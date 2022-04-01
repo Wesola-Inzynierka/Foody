@@ -7,3 +7,15 @@
     flex-direction: column;
     gap: 40px;
 }
+
+@media only screen and (max-width: 768px) {
+    .NavBarSection {
+
+    }
+    
+    .NavBarSection_inner {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }
+}

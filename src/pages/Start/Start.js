@@ -14,6 +14,7 @@ import DietIcon from '../../icons/Diet.svg';
 import SettingsIcon from '../../icons/Settings.svg';
 import AboutIcon from '../../icons/About.svg';
 import AvatarIcon from '../../icons/avatar.png';
+import MenuIcon from '../../icons/Menu.svg';
 
 function Start() {
   return (
@@ -48,6 +49,11 @@ function Start() {
             </NavBarItem>
             <NavBarItem active={false}>
               <Button href='/me' backgroundColor='#CCCCCC' backgroundImage={AvatarIcon}/>
+            </NavBarItem>
+          </NavBarSection>
+          <NavBarSection showInMobile={"only"}>
+            <NavBarItem active={false}>
+              <Button backgroundColor='#CCCCCC' backgroundImage={MenuIcon}/>
             </NavBarItem>
           </NavBarSection>
         </NavBarSection>

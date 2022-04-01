@@ -15,6 +15,7 @@ import DietIcon from '../icons/Diet.svg';
 import SettingsIcon from '../icons/Settings.svg';
 import AboutIcon from '../icons/About.svg';
 import AvatarIcon from '../icons/avatar.png';
+import MenuIcon from '../icons/Menu.svg';
 
 import ChatIcon from '../icons/Chat.svg';
 import SearchBar from '../components/SearchBar/SearchBar';
@@ -40,7 +41,7 @@ function Me() {
     <div className="Me">
       <NavBar>
         <NavBarSection innerStyle={{gap: '70px'}}>
-              <NavBarSection>
+              <NavBarSection showInMobile={false}>
                 <Logo/>
               </NavBarSection>
               <NavBarSection>
@@ -59,7 +60,7 @@ function Me() {
               </NavBarSection>
             </NavBarSection>
           <NavBarSection>
-          <NavBarSection>
+          <NavBarSection showInMobile={false}>
             <NavBarItem active={false}>
               <Button href='/settings' backgroundImage={SettingsIcon}/>
             </NavBarItem>
@@ -68,6 +69,11 @@ function Me() {
             </NavBarItem>
             <NavBarItem active={true}>
               <Button href='/me' backgroundColor='#CCCCCC' backgroundImage={AvatarIcon}/>
+            </NavBarItem>
+          </NavBarSection>
+          <NavBarSection showInMobile={"only"}>
+            <NavBarItem active={false}>
+              <Button backgroundColor='#CCCCCC' backgroundImage={MenuIcon}/>
             </NavBarItem>
           </NavBarSection>
         </NavBarSection>
