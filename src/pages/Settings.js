@@ -1,13 +1,14 @@
 import React from 'react'
 
-import NavBar from '../components/NavBar/NavBar';
-import Board from '../components/Board/Board';
-import BoardColumn from '../components/BoardColumn/BoardColumn';
-import BoardSection from '../components/BoardSection/BoardSection';
+import AppBar from '../components/AppBar/AppBar/AppBar';
+import AppBoard from '../components/AppBoard/AppBoard/AppBoard';
+import AppBoardColumn from '../components/AppBoard/AppBoardColumn/AppBoardColumn';
+import AppBoardSection from '../components/AppBoard/AppBoardSection/AppBoardSection';
+import TopBar from '../components/TopBar/TopBar';
 
-import NavBarSection from '../components/NavBarSection/NavBarSection';
-import NavBarItem from '../components/NavBarItem/NavBarItem';
-import Button from '../components/standard/Button/Button';
+import AppBarSection from '../components/AppBar/AppBarSection/AppBarSection';
+import AppBarItem from '../components/AppBar/AppBarItem/AppBarItem';
+import Button from '../components/Button/Button';
 import Logo from '../components/Logo/Logo';
 import HomeIcon from '../icons/Home.svg';
 import MealsIcon from '../icons/Meals.svg';
@@ -18,7 +19,7 @@ import AboutIcon from '../icons/About.svg';
 import AvatarIcon from '../icons/avatar.png';
 import MenuIcon from '../icons/Menu.svg';
 
-import BoardItem from '../components/BoardItem/BoardItem';
+import AppBoardItem from '../components/AppBoard/AppBoardItem/AppBoardItem';
 
 import ChatIcon from '../icons/Chat.svg';
 import SearchBar from '../components/SearchBar/SearchBar';
@@ -48,56 +49,55 @@ function Settings() {
 
   return (
     <div className="Settings">
-      <NavBar>
-        <NavBarSection innerStyle={{gap: '70px'}}>
-              <NavBarSection showInMobile={false}>
+      <AppBar>
+        <AppBarSection innerStyle={{gap: '70px'}}>
+              <AppBarSection showInMobile={false}>
                 <Logo/>
-              </NavBarSection>
-              <NavBarSection>
-                <NavBarItem active={false}>
+              </AppBarSection>
+              <AppBarSection>
+                <AppBarItem active={false}>
                   <Button href='/' backgroundColor='#212121' backgroundImage={HomeIcon}/>
-                </NavBarItem>
-                <NavBarItem active={false}>
+                </AppBarItem>
+                <AppBarItem active={false}>
                   <Button href='/meals' backgroundColor='#7C99DB' backgroundImage={MealsIcon}/>
-                </NavBarItem>
-                <NavBarItem active={false}>
+                </AppBarItem>
+                <AppBarItem active={false}>
                   <Button href='/discover' backgroundColor='#6D9EE6' backgroundImage={DiscoverIcon}/>
-                </NavBarItem>
-                <NavBarItem active={false}>
+                </AppBarItem>
+                <AppBarItem active={false}>
                   <Button href='/diet' backgroundColor='#6464BB' backgroundImage={DietIcon}/>
-                </NavBarItem>
-              </NavBarSection>
-            </NavBarSection>
-          <NavBarSection>
-          <NavBarSection showInMobile={false}>
-            <NavBarItem active={true}>
+                </AppBarItem>
+              </AppBarSection>
+            </AppBarSection>
+          <AppBarSection>
+          <AppBarSection showInMobile={false}>
+            <AppBarItem active={true}>
               <Button href='/settings' backgroundImage={SettingsIcon}/>
-            </NavBarItem>
-            <NavBarItem active={false}>
-              <Button href='/about' backgroundImage={AboutIcon}/>
-            </NavBarItem>
-            <NavBarItem active={false}>
+            </AppBarItem>
+
+            <AppBarItem active={false}>
               <Button href='/me' backgroundColor='#CCCCCC' backgroundImage={AvatarIcon}/>
-            </NavBarItem>
-          </NavBarSection>
-          <NavBarSection showInMobile={"only"}>
-            <NavBarItem active={false}>
+            </AppBarItem>
+          </AppBarSection>
+          <AppBarSection showInMobile={"only"}>
+            <AppBarItem active={false}>
               <Button backgroundColor='#CCCCCC' backgroundImage={MenuIcon}/>
-            </NavBarItem>
-          </NavBarSection>
-        </NavBarSection>
-      </NavBar>
-      <Board>
-        <BoardColumn widthSize={"large"}>
-          <BoardSection justifyContent={"space-between"}>
-            <SearchBar></SearchBar>
-            <Button href='/chat' backgroundImage={ChatIcon}/>
-          </BoardSection>
-          <BoardSection title={"Display settings"} flexDirection={"column"}>
-            <BoardItem heightSize={"small"} backgroundColor={"#00000000"}>
+            </AppBarItem>
+          </AppBarSection>
+        </AppBarSection>
+      </AppBar>
+      <TopBar>
+        <SearchBar></SearchBar>
+        <Button href='/chat' backgroundImage={ChatIcon}/>
+      </TopBar>
+      <AppBoard>
+        <AppBoardColumn widthSize={"large"}>
+          
+          <AppBoardSection title={window.languagePackage[localStorage.getItem('language')]["display_settings"]} flexDirection={"column"}>
+            <AppBoardItem heightSize={"small"} backgroundColor={"#00000000"}>
               <button onClick={changeTheme}>{themeValue}</button>
-            </BoardItem>
-            <BoardItem heightSize={"small"} backgroundColor={"#00000000"}>
+            </AppBoardItem>
+            <AppBoardItem heightSize={"small"} backgroundColor={"#00000000"}>
               <select onChange={(event) => {changeLanguage(event.target.value)}}>
                 <option>None</option>
                 <option value={"en"}>English</option>
@@ -105,19 +105,19 @@ function Settings() {
                 <option value={"de"}>German</option>
                 <option value={"ru"}>Russian</option>
               </select>
-            </BoardItem>
-          </BoardSection>
-          <BoardSection title={"Account settings"}>
-          </BoardSection>
-          {/* <BoardSection title={"Test section"}>
+            </AppBoardItem>
+          </AppBoardSection>
+          <AppBoardSection title={window.languagePackage[localStorage.getItem('language')]["account_settings"]}>
+          </AppBoardSection>
+          {/* <AppBoardSection title={"Test section"}>
             <button onClick={notify}>Notify!</button>
-          </BoardSection> */}
-        </BoardColumn>
-        <BoardColumn widthSize={"small"}>
-          <BoardSection>
-          </BoardSection>
-        </BoardColumn>
-      </Board>
+          </AppBoardSection> */}
+        </AppBoardColumn>
+        <AppBoardColumn widthSize={"small"}>
+          <AppBoardSection>
+          </AppBoardSection>
+        </AppBoardColumn>
+      </AppBoard>
 
 
       <ToastContainer

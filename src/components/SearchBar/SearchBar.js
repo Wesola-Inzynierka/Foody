@@ -1,5 +1,5 @@
 import './SearchBar.css';
-import Button from '../standard/Button/Button';
+import Button from '../Button/Button';
 import SearchIcon from '../../icons/Search.svg';
 
 function SearchBar() {

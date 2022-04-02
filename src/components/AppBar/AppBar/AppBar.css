@@ -1,14 +1,14 @@
-.NavBar {
+.AppBar {
     top: 0px;
     left: 0px;
     bottom: 0px;
     width: 100px;
     height: 100vh;
-    background-color: var(--navbarBackgroundColor);
+    background-color: var(--appbarBackgroundColor);
     position: fixed;
 }
 
-.NavBar_inner {
+.AppBar_inner {
     height: calc(100% - 60px);
     display: flex;
     flex-direction: column;
@@ -17,17 +17,17 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .NavBar {
+    .AppBar {
         left: 0px;
         top: calc(100vh - 100px);
         right: 0px;
         width: 100vw;
         height: 100px;
-        background-color: var(--navbarBackgroundColor);
+        background-color: var(--appbarBackgroundColor);
         position: fixed;
     }
     
-    .NavBar_inner {
+    .AppBar_inner {
         height: 100%;
         display: flex;
         flex-direction: row;

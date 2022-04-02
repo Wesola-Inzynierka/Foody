@@ -14,7 +14,6 @@ import Search from './pages/Search';
 import Diet from './pages/Diet';
 import Me from './pages/Me';
 import Settings from './pages/Settings';
-import About from './pages/About';
 import Chat from './pages/Chat';
 
 import themePackage from './assets/themePackage.json'
@@ -56,7 +55,6 @@ function App() {
           <Route path="/diet" element={<Diet />} />
           <Route path="/me" element={<Me />} />
           <Route path="/settings" element={<Settings />} />
-          <Route path="/about" element={<About />} />
           <Route path="/chat" element={<Chat />} />
         </Routes>
       </BrowserRouter>

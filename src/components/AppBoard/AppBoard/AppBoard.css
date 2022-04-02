@@ -2,12 +2,13 @@ body {
     padding-left: 100px;
 }
 
-.Board {
+.AppBoard {
     width: calc(100% - 200px);
     padding: 100px;
+    padding-top: 190px;
 }
 
-.Board_inner {
+.AppBoard_inner {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -20,15 +21,15 @@ body {
         padding-left: 0px;
     }
     
-    .Board {
+    .AppBoard {
         width: calc(100% - 80px);
         padding: 40px;
     }
     
-    .Board_inner {
+    .AppBoard_inner {
         width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 6%;
+        gap: 50px;
     }
 }

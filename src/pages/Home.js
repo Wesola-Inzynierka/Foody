@@ -1,12 +1,12 @@
-import NavBar from '../components/NavBar/NavBar';
-import Board from '../components/Board/Board';
-import BoardColumn from '../components/BoardColumn/BoardColumn';
-import BoardSection from '../components/BoardSection/BoardSection';
-import BoardItem from '../components/BoardItem/BoardItem';
+import AppBar from '../components/AppBar/AppBar/AppBar';
+import AppBoard from '../components/AppBoard/AppBoard/AppBoard';
+import AppBoardColumn from '../components/AppBoard/AppBoardColumn/AppBoardColumn';
+import AppBoardSection from '../components/AppBoard/AppBoardSection/AppBoardSection';
+import AppBoardItem from '../components/AppBoard/AppBoardItem/AppBoardItem';
 
-import NavBarSection from '../components/NavBarSection/NavBarSection';
-import NavBarItem from '../components/NavBarItem/NavBarItem';
-import Button from '../components/standard/Button/Button';
+import AppBarSection from '../components/AppBar/AppBarSection/AppBarSection';
+import AppBarItem from '../components/AppBar/AppBarItem//AppBarItem';
+import Button from '../components/Button/Button';
 import Logo from '../components/Logo/Logo';
 import HomeIcon from '../icons/Home.svg';
 import MealsIcon from '../icons/Meals.svg';
@@ -22,78 +22,77 @@ import ChatIcon from '../icons/Chat.svg';
 import SearchBar from '../components/SearchBar/SearchBar';
 import Tools from '../components/Tools';
 import AddIcon from '../icons/Add.svg';
+import TopBar from '../components/TopBar/TopBar';
 
 function Home() {
   return (
     <div className="Home">
-      <NavBar>
-        <NavBarSection innerStyle={{gap: '70px'}}>
-              <NavBarSection showInMobile={false}>
+      <AppBar>
+        <AppBarSection innerStyle={{gap: '70px'}}>
+              <AppBarSection showInMobile={false}>
                 <Logo/>
-              </NavBarSection>
-              <NavBarSection>
-                <NavBarItem active={true}>
+              </AppBarSection>
+              <AppBarSection>
+                <AppBarItem active={true}>
                   <Button href='/' backgroundColor='#212121' backgroundImage={HomeIcon}/>
-                </NavBarItem>
-                <NavBarItem active={false}>
+                </AppBarItem>
+                <AppBarItem active={false}>
                   <Button href='/meals' backgroundColor='#7C99DB' backgroundImage={MealsIcon}/>
-                </NavBarItem>
-                <NavBarItem active={false}>
+                </AppBarItem>
+                <AppBarItem active={false}>
                   <Button href='/discover' backgroundColor='#6D9EE6' backgroundImage={DiscoverIcon}/>
-                </NavBarItem>
-                <NavBarItem active={false}>
+                </AppBarItem>
+                <AppBarItem active={false}>
                   <Button href='/diet' backgroundColor='#6464BB' backgroundImage={DietIcon}/>
-                </NavBarItem>
-              </NavBarSection>
-            </NavBarSection>
-          <NavBarSection>
-          <NavBarSection showInMobile={false}>
-            <NavBarItem active={false}>
+                </AppBarItem>
+              </AppBarSection>
+            </AppBarSection>
+          <AppBarSection>
+          <AppBarSection showInMobile={false}>
+            <AppBarItem active={false}>
               <Button href='/settings' backgroundImage={SettingsIcon}/>
-            </NavBarItem>
-            <NavBarItem active={false}>
-              <Button href='/about' backgroundImage={AboutIcon}/>
-            </NavBarItem>
-            <NavBarItem active={false}>
+            </AppBarItem>
+
+            <AppBarItem active={false}>
               <Button href='/me' backgroundColor='#CCCCCC' backgroundImage={AvatarIcon}/>
-            </NavBarItem>
-          </NavBarSection>
-          <NavBarSection showInMobile={"only"}>
-            <NavBarItem active={false}>
+            </AppBarItem>
+          </AppBarSection>
+          <AppBarSection showInMobile={"only"}>
+            <AppBarItem active={false}>
               <Button backgroundColor='#CCCCCC' backgroundImage={MenuIcon}/>
-            </NavBarItem>
-          </NavBarSection>
-        </NavBarSection>
-      </NavBar>
-      <Board>
-        <BoardColumn widthSize={"large"}>
-          <BoardSection justifyContent={"space-between"}>
-            <SearchBar></SearchBar>
-            <Button href='/chat' backgroundImage={ChatIcon}/>
-          </BoardSection>
-          <BoardSection title={window.languagePackage[localStorage.getItem('language')]["recipes_for_you"]}>
-            <BoardItem widthSize={"large"}></BoardItem>
-            <BoardItem></BoardItem>
-            <BoardItem></BoardItem>
-            <BoardItem></BoardItem>
-            <BoardItem></BoardItem>
-            <BoardItem></BoardItem>
-            <BoardItem></BoardItem>
-            <BoardItem></BoardItem>
-            <BoardItem></BoardItem>
-          </BoardSection>
-          <BoardSection title={window.languagePackage[localStorage.getItem('language')]["today_summary"]}>
-            <BoardItem heightSize={"small"} backgroundColor={"#314A6E"}></BoardItem>
-            <BoardItem heightSize={"small"}></BoardItem>
-            <BoardItem heightSize={"small"}></BoardItem>
-            <BoardItem heightSize={"small"}></BoardItem>
-          </BoardSection>
-        </BoardColumn>
-        <BoardColumn widthSize={"small"}>
-          <BoardSection>
-          </BoardSection>
-        </BoardColumn>
-      </Board>
+            </AppBarItem>
+          </AppBarSection>
+        </AppBarSection>
+      </AppBar>
+      <TopBar>
+        <SearchBar></SearchBar>
+        <Button href='/chat' backgroundImage={ChatIcon}/>
+      </TopBar>
+      <AppBoard>
+        <AppBoardColumn widthSize={"large"}>
+          <AppBoardSection title={window.languagePackage[localStorage.getItem('language')]["recipes_for_you"]}>
+            <AppBoardItem widthSize={"large"}></AppBoardItem>
+            <AppBoardItem></AppBoardItem>
+            <AppBoardItem></AppBoardItem>
+            <AppBoardItem></AppBoardItem>
+            <AppBoardItem></AppBoardItem>
+            <AppBoardItem></AppBoardItem>
+            <AppBoardItem></AppBoardItem>
+            <AppBoardItem></AppBoardItem>
+            <AppBoardItem></AppBoardItem>
+          </AppBoardSection>
+          <AppBoardSection title={window.languagePackage[localStorage.getItem('language')]["today_summary"]}>
+            <AppBoardItem heightSize={"small"} backgroundColor={"#314A6E"}></AppBoardItem>
+            <AppBoardItem heightSize={"small"}></AppBoardItem>
+            <AppBoardItem heightSize={"small"}></AppBoardItem>
+            <AppBoardItem heightSize={"small"}></AppBoardItem>
+          </AppBoardSection>
+        </AppBoardColumn>
+        <AppBoardColumn widthSize={"small"}>
+          <AppBoardSection>
+          </AppBoardSection>
+        </AppBoardColumn>
+      </AppBoard>
     </div>
   );
 }

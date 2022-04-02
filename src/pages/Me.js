@@ -1,12 +1,13 @@
-import NavBar from '../components/NavBar/NavBar';
-import Board from '../components/Board/Board';
-import BoardColumn from '../components/BoardColumn/BoardColumn';
-import BoardSection from '../components/BoardSection/BoardSection';
-import BoardItem from '../components/BoardItem/BoardItem';
+import AppBar from '../components/AppBar/AppBar/AppBar';
+import AppBoard from '../components/AppBoard/AppBoard/AppBoard';
+import AppBoardColumn from '../components/AppBoard/AppBoardColumn/AppBoardColumn';
+import AppBoardSection from '../components/AppBoard/AppBoardSection/AppBoardSection';
+import AppBoardItem from '../components/AppBoard/AppBoardItem/AppBoardItem';
+import TopBar from '../components/TopBar/TopBar';
 
-import NavBarSection from '../components/NavBarSection/NavBarSection';
-import NavBarItem from '../components/NavBarItem/NavBarItem';
-import Button from '../components/standard/Button/Button';
+import AppBarSection from '../components/AppBar/AppBarSection/AppBarSection';
+import AppBarItem from '../components/AppBar/AppBarItem//AppBarItem';
+import Button from '../components/Button/Button';
 import Logo from '../components/Logo/Logo';
 import HomeIcon from '../icons/Home.svg';
 import MealsIcon from '../icons/Meals.svg';
@@ -39,85 +40,84 @@ function Me() {
 
   return (
     <div className="Me">
-      <NavBar>
-        <NavBarSection innerStyle={{gap: '70px'}}>
-              <NavBarSection showInMobile={false}>
+      <AppBar>
+        <AppBarSection innerStyle={{gap: '70px'}}>
+              <AppBarSection showInMobile={false}>
                 <Logo/>
-              </NavBarSection>
-              <NavBarSection>
-                <NavBarItem active={false}>
+              </AppBarSection>
+              <AppBarSection>
+                <AppBarItem active={false}>
                   <Button href='/' backgroundColor='#212121' backgroundImage={HomeIcon}/>
-                </NavBarItem>
-                <NavBarItem active={false}>
+                </AppBarItem>
+                <AppBarItem active={false}>
                   <Button href='/meals' backgroundColor='#7C99DB' backgroundImage={MealsIcon}/>
-                </NavBarItem>
-                <NavBarItem active={false}>
+                </AppBarItem>
+                <AppBarItem active={false}>
                   <Button href='/discover' backgroundColor='#6D9EE6' backgroundImage={DiscoverIcon}/>
-                </NavBarItem>
-                <NavBarItem active={false}>
+                </AppBarItem>
+                <AppBarItem active={false}>
                   <Button href='/diet' backgroundColor='#6464BB' backgroundImage={DietIcon}/>
-                </NavBarItem>
-              </NavBarSection>
-            </NavBarSection>
-          <NavBarSection>
-          <NavBarSection showInMobile={false}>
-            <NavBarItem active={false}>
+                </AppBarItem>
+              </AppBarSection>
+            </AppBarSection>
+          <AppBarSection>
+          <AppBarSection showInMobile={false}>
+            <AppBarItem active={false}>
               <Button href='/settings' backgroundImage={SettingsIcon}/>
-            </NavBarItem>
-            <NavBarItem active={false}>
-              <Button href='/about' backgroundImage={AboutIcon}/>
-            </NavBarItem>
-            <NavBarItem active={true}>
+            </AppBarItem>
+
+            <AppBarItem active={true}>
               <Button href='/me' backgroundColor='#CCCCCC' backgroundImage={AvatarIcon}/>
-            </NavBarItem>
-          </NavBarSection>
-          <NavBarSection showInMobile={"only"}>
-            <NavBarItem active={false}>
+            </AppBarItem>
+          </AppBarSection>
+          <AppBarSection showInMobile={"only"}>
+            <AppBarItem active={false}>
               <Button backgroundColor='#CCCCCC' backgroundImage={MenuIcon}/>
-            </NavBarItem>
-          </NavBarSection>
-        </NavBarSection>
-      </NavBar>
-      <Board>
-        <BoardColumn widthSize={"large"}>
-          <BoardSection justifyContent={"space-between"}>
-            <SearchBar></SearchBar>
-            <Button href='/chat' backgroundImage={ChatIcon}/>
-          </BoardSection>
-          <BoardSection>
-          </BoardSection>
-          <BoardSection title={window.languagePackage[localStorage.getItem('language')]["activity_level"]}>
-          </BoardSection>
-          <BoardSection title={window.languagePackage[localStorage.getItem('language')]["passa"]}>
-          </BoardSection>
-        </BoardColumn>
-        <BoardColumn widthSize={"small"}>
-          <BoardSection title={window.languagePackage[localStorage.getItem('language')]["badges"]} backgroundColor={"#ffffff"}>
-            <BoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></BoardItem>
-            <BoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></BoardItem>
-            <BoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></BoardItem>
-            <BoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></BoardItem>
-            <BoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></BoardItem>
-            <BoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></BoardItem>
-            <BoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></BoardItem>
-            <BoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></BoardItem>
-            <BoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></BoardItem>
-            <BoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></BoardItem>
-          </BoardSection>
-          <BoardSection title={window.languagePackage[localStorage.getItem('language')]["personal_bests"]} backgroundColor={"#ffffff"}>
-            <BoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></BoardItem>
-            <BoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></BoardItem>
-            <BoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></BoardItem>
-            <BoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></BoardItem>
-            <BoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></BoardItem>
-            <BoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></BoardItem>
-            <BoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></BoardItem>
-            <BoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></BoardItem>
-            <BoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></BoardItem>
-            <BoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></BoardItem>
-          </BoardSection>
-        </BoardColumn>
-      </Board>
+            </AppBarItem>
+          </AppBarSection>
+        </AppBarSection>
+      </AppBar>
+      <TopBar>
+        <SearchBar></SearchBar>
+        <Button href='/chat' backgroundImage={ChatIcon}/>
+      </TopBar>
+      <AppBoard>
+        <AppBoardColumn widthSize={"large"}>
+          
+          <AppBoardSection title={"Jakub Łabendowicz"}>
+          </AppBoardSection>
+          <AppBoardSection title={window.languagePackage[localStorage.getItem('language')]["activity_level"]}>
+          </AppBoardSection>
+          <AppBoardSection title={window.languagePackage[localStorage.getItem('language')]["passa"]}>
+          </AppBoardSection>
+        </AppBoardColumn>
+        <AppBoardColumn widthSize={"small"}>
+          <AppBoardSection title={window.languagePackage[localStorage.getItem('language')]["badges"]} backgroundColor={window.themePackage[localStorage.getItem('theme')]["appBoardSectionBackgroundColor"]}>
+            <AppBoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></AppBoardItem>
+            <AppBoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></AppBoardItem>
+            <AppBoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></AppBoardItem>
+            <AppBoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></AppBoardItem>
+            <AppBoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></AppBoardItem>
+            <AppBoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></AppBoardItem>
+            <AppBoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></AppBoardItem>
+            <AppBoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></AppBoardItem>
+            <AppBoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></AppBoardItem>
+            <AppBoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></AppBoardItem>
+          </AppBoardSection>
+          <AppBoardSection title={window.languagePackage[localStorage.getItem('language')]["personal_bests"]} backgroundColor={window.themePackage[localStorage.getItem('theme')]["appBoardSectionBackgroundColor"]}>
+            <AppBoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></AppBoardItem>
+            <AppBoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></AppBoardItem>
+            <AppBoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></AppBoardItem>
+            <AppBoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></AppBoardItem>
+            <AppBoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></AppBoardItem>
+            <AppBoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></AppBoardItem>
+            <AppBoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></AppBoardItem>
+            <AppBoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></AppBoardItem>
+            <AppBoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></AppBoardItem>
+            <AppBoardItem heightSize={"small"} widthSize={"small"} backgroundColor={"#314A6E"}></AppBoardItem>
+          </AppBoardSection>
+        </AppBoardColumn>
+      </AppBoard>
       <Tools.ToolsBoard>
         <Tools.ToolsFace>
           <Button size={"large"} href='/discover' backgroundColor='#6D9EE6' backgroundImage={AddIcon}/>

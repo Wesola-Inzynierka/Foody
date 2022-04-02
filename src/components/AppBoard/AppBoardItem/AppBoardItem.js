@@ -1,9 +1,9 @@
-import './BoardItem.css';
+import './AppBoardItem.css';
 
-function BoardItem({children, backgroundColor, widthSize, heightSize}) {
+function AppBoardItem({children, backgroundColor, widthSize, heightSize}) {
     var style = {
-        backgroundColor: window.themePackage[localStorage.getItem('theme')]["boardItemBackgroundColor"],
-        color: window.themePackage[localStorage.getItem('theme')]["boardItemTextColor"]
+        backgroundColor: window.themePackage[localStorage.getItem('theme')]["appBoardItemBackgroundColor"],
+        color: window.themePackage[localStorage.getItem('theme')]["appBoardItemTextColor"]
       }
     
     if(backgroundColor != undefined) {
@@ -27,13 +27,13 @@ function BoardItem({children, backgroundColor, widthSize, heightSize}) {
     }
 
     return (
-      <div className="BoardItem" style={style}>
-          <div className="BoardItem_inner">
+      <div className="AppBoardItem" style={style}>
+          <div className="AppBoardItem_inner">
               {children}
           </div>
       </div>
     );
   }
   
-  export default BoardItem;
+  export default AppBoardItem;
   

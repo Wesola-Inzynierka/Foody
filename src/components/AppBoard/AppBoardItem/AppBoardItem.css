@@ -1,9 +1,9 @@
-.BoardItem {
+.AppBoardItem {
     width: 155px;
     height: 155px;
     border-radius: 20px;
 }
 
-.BoardItem:hover {
+.AppBoardItem:hover {
     background-color: #eeeeee;
 }

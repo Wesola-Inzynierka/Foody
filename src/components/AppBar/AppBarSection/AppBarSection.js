@@ -1,6 +1,6 @@
-import './NavBarSection.css';
+import './AppBarSection.css';
 
-function NavBarSection({children, innerStyle, showInMobile}) {
+function AppBarSection({children, innerStyle, showInMobile}) {
   var style = {}
   if(showInMobile == 'only' && window.innerWidth > 768) {
     style.display = 'none';
@@ -9,12 +9,12 @@ function NavBarSection({children, innerStyle, showInMobile}) {
   }
 
   return (
-    <section className="NavBarSection" style={style}>
-        <div className="NavBarSection_inner" style={innerStyle}>
+    <section className="AppBarSection" style={style}>
+        <div className="AppBarSection_inner" style={innerStyle}>
             {children}
         </div>
     </section>
   );
 }
 
-export default NavBarSection;
+export default AppBarSection;

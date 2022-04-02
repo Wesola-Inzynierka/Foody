@@ -1,6 +1,6 @@
-import './BoardColumn.css';
+import './AppBoardColumn.css';
 
-function BoardColumn({children, widthSize}) {
+function AppBoardColumn({children, widthSize}) {
   var style = {}
 
   if(window.innerWidth > 768) {
@@ -10,19 +10,21 @@ function BoardColumn({children, widthSize}) {
         style.width = "47%";
     } else if(widthSize == "large") {
         style.width = "61%";
-    }
+    } else if(widthSize == "full") {
+      style.width = "100%";
+  }
   }
 
 
 
   return (
-    <div className="BoardColumn" style={style}>
-        <div className="BoardColumn_inner">
+    <div className="AppBoardColumn" style={style}>
+        <div className="AppBoardColumn_inner">
             {children}
         </div>
     </div>
   );
 }
   
-export default BoardColumn;
+export default AppBoardColumn;
   

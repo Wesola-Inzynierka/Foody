@@ -1,5 +1,5 @@
 import './Button.css';
-import Icon from '../../Icon/Icon';
+import Icon from '../Icon/Icon';
 
 function Button({size, backgroundColor, href, backgroundImage, onClick}) {
     var style = {

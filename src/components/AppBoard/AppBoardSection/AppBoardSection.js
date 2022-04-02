@@ -1,6 +1,6 @@
-import './BoardSection.css';
+import './AppBoardSection.css';
 
-function BoardSection({children, title, backgroundColor, justifyContent, flexDirection}) {
+function AppBoardSection({children, title, backgroundColor, justifyContent, flexDirection}) {
   if(backgroundColor != undefined) {
     var style = {
       backgroundColor: backgroundColor,
@@ -16,19 +16,19 @@ function BoardSection({children, title, backgroundColor, justifyContent, flexDir
   
   if(title != undefined) {
     return (
-      <div className="BoardSection" style={style}>
-          <div className="BoardSection_title">
+      <div className="AppBoardSection" style={style}>
+          <div className="AppBoardSection_title">
             {title}
           </div>
-          <div className="BoardSection_inner" style={innerStyle}>
+          <div className="AppBoardSection_inner" style={innerStyle}>
               {children}
           </div>
       </div>
     );
   } else {
     return (
-      <div className="BoardSection" style={style}>
-          <div className="BoardSection_inner" style={innerStyle}>
+      <div className="AppBoardSection" style={style}>
+          <div className="AppBoardSection_inner" style={innerStyle}>
               {children}
           </div>
       </div>
@@ -36,5 +36,5 @@ function BoardSection({children, title, backgroundColor, justifyContent, flexDir
   }
   }
   
-  export default BoardSection;
+  export default AppBoardSection;
   
