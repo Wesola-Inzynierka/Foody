@@ -26,7 +26,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import Tools from '../components/Tools';
 import AddIcon from '../icons/Add.svg';
 
+import ThemeButton from '../components/ThemeButton/ThemeButton';
+import useTheme from '../hooks/useTheme';
+
 function Discover() {
+  const {themeValue, changeTheme} = useTheme()
   const recipeSuccess = () => toast.success('Recipe added successfull!', {
     position: "top-center",
     autoClose: 5000,
@@ -73,6 +77,9 @@ function Discover() {
             </AppBarSection>
           <AppBarSection>
           <AppBarSection showInMobile={false}>
+            <AppBarItem active={false}>
+              <ThemeButton onClick={changeTheme}></ThemeButton>
+            </AppBarItem>
             <AppBarItem active={false}>
               <Button href='/settings' backgroundImage={SettingsIcon}/>
             </AppBarItem>

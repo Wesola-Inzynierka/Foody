@@ -16,7 +16,11 @@ import AboutIcon from '../../icons/About.svg';
 import AvatarIcon from '../../icons/avatar.png';
 import MenuIcon from '../../icons/Menu.svg';
 
+import ThemeButton from '../../components/ThemeButton/ThemeButton';
+import useTheme from '../../hooks/useTheme';
+
 function Start() {
+  const {themeValue, changeTheme} = useTheme()
   return (
     <div className="Start">
       <AppBar>
@@ -41,6 +45,9 @@ function Start() {
         </AppBarSection>
         <AppBarSection>
           <AppBarSection>
+            <AppBarItem active={false}>
+              <ThemeButton onClick={changeTheme}></ThemeButton>
+            </AppBarItem>
             <AppBarItem active={false}>
               <Button href='/settings' backgroundImage={SettingsIcon}/>
             </AppBarItem>

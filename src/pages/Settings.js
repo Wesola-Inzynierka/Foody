@@ -31,6 +31,7 @@ import AddIcon from '../icons/Add.svg';
 
 import useTheme from '../hooks/useTheme';
 import useLanguage from '../hooks/useLanguage';
+import ThemeButton from '../components/ThemeButton/ThemeButton';
 
 function Settings() {
   const {themeValue, changeTheme} = useTheme()
@@ -71,6 +72,9 @@ function Settings() {
             </AppBarSection>
           <AppBarSection>
           <AppBarSection showInMobile={false}>
+            <AppBarItem active={false}>
+              <ThemeButton onClick={changeTheme}></ThemeButton>
+            </AppBarItem>
             <AppBarItem active={true}>
               <Button href='/settings' backgroundImage={SettingsIcon}/>
             </AppBarItem>

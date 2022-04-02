@@ -1,0 +1,21 @@
+.Button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: #00000000;
+}
+
+.Button:hover {
+    background-color: #1f1f1faa;
+    cursor: pointer;
+}
+
+.Button_inner {
+    align-self: center;
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-size: cover;
+}

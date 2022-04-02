@@ -23,7 +23,11 @@ import SearchBar from '../components/SearchBar/SearchBar';
 import Tools from '../components/Tools';
 import AddIcon from '../icons/Add.svg';
 
+import ThemeButton from '../components/ThemeButton/ThemeButton';
+import useTheme from '../hooks/useTheme';
+
 function Chat() {
+  const {themeValue, changeTheme} = useTheme()
   return (
     <div className="Chat">
       <AppBar>
@@ -48,6 +52,9 @@ function Chat() {
             </AppBarSection>
           <AppBarSection>
           <AppBarSection showInMobile={false}>
+            <AppBarItem active={false}>
+              <ThemeButton onClick={changeTheme}></ThemeButton>
+            </AppBarItem>
             <AppBarItem active={false}>
               <Button href='/settings' backgroundImage={SettingsIcon}/>
             </AppBarItem>

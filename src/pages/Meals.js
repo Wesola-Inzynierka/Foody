@@ -26,7 +26,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import Tools from '../components/Tools';
 import AddIcon from '../icons/Add.svg';
 
+import ThemeButton from '../components/ThemeButton/ThemeButton';
+import useTheme from '../hooks/useTheme';
+
 function Meals() {
+  const {themeValue, changeTheme} = useTheme()
 
   const notify = () => toast.success('Meal added successfull!', {
     position: "top-center",
@@ -63,6 +67,9 @@ function Meals() {
             </AppBarSection>
           <AppBarSection>
           <AppBarSection showInMobile={false}>
+            <AppBarItem active={false}>
+              <ThemeButton onClick={changeTheme}></ThemeButton>
+            </AppBarItem>
             <AppBarItem active={false}>
               <Button href='/settings' backgroundImage={SettingsIcon}/>
             </AppBarItem>

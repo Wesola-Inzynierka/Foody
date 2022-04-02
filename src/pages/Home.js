@@ -24,7 +24,11 @@ import Tools from '../components/Tools';
 import AddIcon from '../icons/Add.svg';
 import TopBar from '../components/TopBar/TopBar';
 
+import ThemeButton from '../components/ThemeButton/ThemeButton';
+import useTheme from '../hooks/useTheme';
+
 function Home() {
+  const {themeValue, changeTheme} = useTheme()
   return (
     <div className="Home">
       <AppBar>
@@ -49,6 +53,9 @@ function Home() {
             </AppBarSection>
           <AppBarSection>
           <AppBarSection showInMobile={false}>
+            <AppBarItem active={false}>
+              <ThemeButton onClick={changeTheme}></ThemeButton>
+            </AppBarItem>
             <AppBarItem active={false}>
               <Button href='/settings' backgroundImage={SettingsIcon}/>
             </AppBarItem>
