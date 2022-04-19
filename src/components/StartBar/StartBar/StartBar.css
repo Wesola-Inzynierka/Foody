@@ -1,0 +1,17 @@
+.StartBar {
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    width: 100vw;
+    height: 100px;
+    background-color: var(--appbarBackgroundColor);
+    position: fixed;
+}
+
+.StartBar_inner {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 50px;
+}

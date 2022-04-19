@@ -12,7 +12,7 @@
     cursor: pointer;
 }
 
-.Button_inner {
+.IconButton_inner {
     align-self: center;
     width: 24px;
     height: 24px;

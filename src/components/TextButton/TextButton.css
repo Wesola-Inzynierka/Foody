@@ -1,20 +1,21 @@
-.Button {
-    width: 40px;
+.TextButton {
     height: 40px;
+    padding: 0px 16px;
     display: flex;
     justify-content: center;
     border-radius: 8px;
     background-color: #00000000;
 }
 
-.Button:hover {
+.TextButton:hover {
     background-color: #1f1f1faa;
     cursor: pointer;
 }
 
-.Button_inner {
+.TextButton_inner {
+    font-size: 16px;
+    line-height: 24px;
     align-self: center;
-    width: 24px;
     height: 24px;
     background-position: center;
     background-size: cover;

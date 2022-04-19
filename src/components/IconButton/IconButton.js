@@ -1,7 +1,7 @@
-import './Button.css';
+import './IconButton.css';
 import Icon from '../Icon/Icon';
 
-function Button({size, backgroundColor, href, backgroundImage, onClick}) {
+function IconButton({size, backgroundColor, href, backgroundImage, onClick}) {
     var style = {
         backgroundColor: backgroundColor
     }
@@ -23,12 +23,12 @@ function Button({size, backgroundColor, href, backgroundImage, onClick}) {
     }
 
   return (
-    <a className='Button' href={href} style={style} onClick={onClick}>
-        <div className='Button_inner'>
+    <a className='IconButton' href={href} style={style} onClick={onClick}>
+        <div className='IconButton_inner'>
             <Icon backgroundImage={backgroundImage} invertable={iconInvertable}></Icon>
         </div>
     </a>
   );
 }
 
-export default Button;
+export default IconButton;

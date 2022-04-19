@@ -2,14 +2,14 @@ import './ThemeButton.css';
 import LightIcon from '../../icons/Light.svg';
 import DarkIcon from '../../icons/Dark.svg';
 
-import Button from '../Button/Button';
+import IconButton from '../IconButton/IconButton';
 
 function ThemeButton({onClick}) {
     if(localStorage.getItem('theme') == "light") {
         return (
             <a className='ThemeButton'>
                 <div className='ThemeButton_inner'>
-                    <Button backgroundImage={LightIcon} onClick={onClick}/>
+                    <IconButton backgroundImage={LightIcon} onClick={onClick}/>
                 </div>
             </a>
           );
@@ -17,7 +17,7 @@ function ThemeButton({onClick}) {
         return (
             <a className='ThemeButton'>
                 <div className='ThemeButton_inner'>
-                    <Button backgroundImage={DarkIcon} onClick={onClick}/>
+                    <IconButton backgroundImage={DarkIcon} onClick={onClick}/>
                 </div>
             </a>
           );

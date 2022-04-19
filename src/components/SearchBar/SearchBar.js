@@ -1,5 +1,5 @@
 import './SearchBar.css';
-import Button from '../Button/Button';
+import IconButton from '../IconButton/IconButton';
 import SearchIcon from '../../icons/Search.svg';
 
 function SearchBar() {
@@ -11,7 +11,7 @@ function SearchBar() {
     <div className='SearchBar' style={style}>
         <div className='SearchBar_inner'>
             <div className='SearchBar_field'> {window.languagePackage[localStorage.getItem('language')]['search']}</div>
-            <Button href='/search' backgroundImage={SearchIcon}/>
+            <IconButton href='/search' backgroundImage={SearchIcon}/>
         </div>
     </div>
   );

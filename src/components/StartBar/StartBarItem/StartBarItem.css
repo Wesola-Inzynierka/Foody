@@ -1,0 +1,20 @@
+.StartBarItem {
+    /* width: 40px; */
+    height: 70px;
+    padding: 30px 0px 0px 0px;
+}
+
+.StartBarItem_inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* width: 40px; */
+    height: 70px;
+}
+
+.StartBarItem_active {
+    content: ".";
+    background-color: #000000;
+    width: 40px;
+    height: 4px;
+}

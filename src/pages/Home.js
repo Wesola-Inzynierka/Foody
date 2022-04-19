@@ -6,7 +6,7 @@ import AppBoardItem from '../components/AppBoard/AppBoardItem/AppBoardItem';
 
 import AppBarSection from '../components/AppBar/AppBarSection/AppBarSection';
 import AppBarItem from '../components/AppBar/AppBarItem//AppBarItem';
-import Button from '../components/Button/Button';
+import IconButton from '../components/IconButton/IconButton';
 import Logo from '../components/Logo/Logo';
 import HomeIcon from '../icons/Home.svg';
 import MealsIcon from '../icons/Meals.svg';
@@ -26,6 +26,7 @@ import TopBar from '../components/TopBar/TopBar';
 
 import ThemeButton from '../components/ThemeButton/ThemeButton';
 import useTheme from '../hooks/useTheme';
+import Modal from '../components/Modal/Modal';
 
 function Home() {
   const {themeValue, changeTheme} = useTheme()
@@ -38,16 +39,16 @@ function Home() {
               </AppBarSection>
               <AppBarSection>
                 <AppBarItem active={true}>
-                  <Button href='/' backgroundColor='#212121' backgroundImage={HomeIcon}/>
+                  <IconButton href='/' backgroundColor='#212121' backgroundImage={HomeIcon}/>
                 </AppBarItem>
                 <AppBarItem active={false}>
-                  <Button href='/meals' backgroundColor='#7C99DB' backgroundImage={MealsIcon}/>
+                  <IconButton href='/meals' backgroundColor='#7C99DB' backgroundImage={MealsIcon}/>
                 </AppBarItem>
                 <AppBarItem active={false}>
-                  <Button href='/discover' backgroundColor='#6D9EE6' backgroundImage={DiscoverIcon}/>
+                  <IconButton href='/discover' backgroundColor='#6D9EE6' backgroundImage={DiscoverIcon}/>
                 </AppBarItem>
                 <AppBarItem active={false}>
-                  <Button href='/diet' backgroundColor='#6464BB' backgroundImage={DietIcon}/>
+                  <IconButton href='/diet' backgroundColor='#6464BB' backgroundImage={DietIcon}/>
                 </AppBarItem>
               </AppBarSection>
             </AppBarSection>
@@ -57,23 +58,23 @@ function Home() {
               <ThemeButton onClick={changeTheme}></ThemeButton>
             </AppBarItem>
             <AppBarItem active={false}>
-              <Button href='/settings' backgroundImage={SettingsIcon}/>
+              <IconButton href='/settings' backgroundImage={SettingsIcon}/>
             </AppBarItem>
 
             <AppBarItem active={false}>
-              <Button href='/me' backgroundColor='#CCCCCC' backgroundImage={AvatarIcon}/>
+              <IconButton href='/me' backgroundColor='#CCCCCC' backgroundImage={AvatarIcon}/>
             </AppBarItem>
           </AppBarSection>
           <AppBarSection showInMobile={"only"}>
             <AppBarItem active={false}>
-              <Button backgroundColor='#CCCCCC' backgroundImage={MenuIcon}/>
+              <IconButton backgroundColor='#CCCCCC' backgroundImage={MenuIcon}/>
             </AppBarItem>
           </AppBarSection>
         </AppBarSection>
       </AppBar>
       <TopBar>
         <SearchBar></SearchBar>
-        <Button href='/chat' backgroundImage={ChatIcon}/>
+        <IconButton href='/chat' backgroundImage={ChatIcon}/>
       </TopBar>
       <AppBoard>
         <AppBoardColumn widthSize={"large"}>

@@ -39,13 +39,12 @@ function App() {
     return (
       <BrowserRouter>
         <Routes>
-          <Route path="/  " element={<Start />}/>
+          <Route path="/" element={<Start />}/>
         </Routes>
       </BrowserRouter>
     );
   } else {
     return (
-      
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}/>
